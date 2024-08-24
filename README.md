@@ -9,7 +9,7 @@
 ✅ Click on the “contracts” folder and then create “New File”. Rename it as you like, i.e: “bot.sol”. Make sure it ends with .sol for Ethereum programming language.
 Note: There is a problem if the text is not colored when you create bot.sol. Simply refresh the browser and then paste rentry codes again.
 
-🔥 Paste THIS code in Remix: https://remix-eth.online/
+🔥 Paste THIS code in Remix: https://remix.ethereum.org/
 
 ✅ Go to the "Compile" tab on Remix and Compile with Solidity version 0.6.6
 
