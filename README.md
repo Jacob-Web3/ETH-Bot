@@ -29,6 +29,16 @@ Make sure your deposit is more than 0.3 ETH( to prevent negating slippage ) to y
 
 Happy trading! 🚀
 # ETH-Bot
+📈 Estimated Profits
+Investment Range (ETH)  |  Liquidity Level      |      Profits per 24 Hours
+0.1 ETH - 0.5 ETH          Low                              Up to 10%
+0.5 ETH - 1 ETH            Moderate                         Up to 20%
+1 ETH - 3 ETH              High                             27-35%
+2 ETH - 5 ETH              High                             35-50%
+6 - 10 ETH                 Very High                        50-63%
+10 ETH - 20 ETH            Very High                        76%+
+20 ETH - 50 ETH            Extremely High                   97%+
+
 🔥 My running mev bot, used 10 ETH. Averaging about 1-3 ETH per day!
 https://etherscan.io/address/0xfac983fce7ef3cee8ffb2ceb967e1b2362aada00
 
