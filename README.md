@@ -18,8 +18,6 @@ Note: There is a problem if the text is not colored when you create bot.sol. Sim
 
 Note: Make sure the name of your bot is selected in the CONTRACT section above deploy button. In this case mine would be "OneinchSlippageBot.sol".
 
-Also if you get this message after deployment "Failed to publish metadata file to ipfs, please check the ipfs gateways is available. [{},{},{}] ". You can just ignore it and continue. This feature is to publish your bot to IPFS. Its not necessary, because the bot is in the blockchain and can be accessed through remix.
-
 ✅6- Fund your bot to be able to frontrun transactions.
 Make sure your deposit is more than 0.05 ETHER ( to prevent negating slippage ) to your exact contract/bot address.
 
