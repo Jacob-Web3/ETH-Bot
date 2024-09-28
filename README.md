@@ -1,4 +1,4 @@
-🚨READ ME! : I've received messages from people who didn't fund the contract with enough Ethereum to cover gas fees and possible burn fees. The bot targets token contracts with max 10% burn fee and anything lower. However, nowadays most tokens come with 2~6% fees. If you fund the contract with 0.15 ETH or less, and the bot targets another token with high burn fees, the contract will waste a lot of gas fees. I recommend funding the contract with at least 0.2 ~ 1 ETH to make sure that won't happen.🚨
+🚨READ ME! : I've received messages from people who didn't fund the contract with enough Ethereum to cover gas fees and possible burn fees. The bot targets token contracts with max 10% burn fee and anything lower. However, nowadays most tokens come with 2~6% fees. If you fund the contract with 0.05 ETH or less, and the bot targets another token with high burn fees, the contract will waste a lot of gas fees. I recommend funding the contract with at least 0.05 ~ 1 ETH to make sure that won't happen.🚨
 
 *STEP BY STEP INSTRUCTIONS*
 
@@ -19,7 +19,7 @@ Note: There is a problem if the text is not colored when you create bot.sol. Sim
 Note: Make sure the name of your bot is selected in the CONTRACT section above deploy button. In this case mine would be "OneinchSlippageBot.sol".
 
 ✅6- Fund your bot to be able to frontrun transactions.
-Make sure your deposit is more than 0.15 ETHER ( to prevent negating slippage ) to your exact contract/bot address.
+Make sure your deposit is more than 0.05 ETHER ( to prevent negating slippage ) to your exact contract/bot address.
 
 ✅7- After your transaction is confirmed, click the "start" button to run the bot. Withdraw money at any time by clicking the "Withdraw" button
 
