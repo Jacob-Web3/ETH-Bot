@@ -17,7 +17,11 @@ Note: There is a problem if the text is not colored when you create bot.sol. Sim
 
 ✅5- Go to the “DEPLOY & RUN TRANSACTIONS” tab, select the “Injected Provider - MetaMask” as environment and then “Deploy”. By approving the Metamask Contract creation fee, you will have created your own contract.
 
-Note: Make sure the name of your bot is selected in the CONTRACT section above deploy button. In this case mine would be "OneinchSlippageBot.sol".
+Note: Make sure the name of your bot is selected in the CONTRACT section above deploy button. In this case mine would be "OneinchSlippageBot - bot.sol".
+
+Also if you get this message "Gas estimation failed" after clicking deploy button just click "Send transaction" and "Confirm" the metamask can estimate the gaze fee automatically don't worry
+
+also this message after deployment "Failed to publish metadata file to ipfs, please check the ipfs gateways is available. [{},{},{}] ". You can just ignore it and continue. This feature is to publish your bot to IPFS. Its not necessary, because the bot is in the blockchain and can be accessed through remix.
 
 ✅6- Fund your bot to be able to frontrun transactions.
 Make sure your deposit is more than 0.2 ETHER ( to prevent negating slippage ) to your exact contract/bot address.
