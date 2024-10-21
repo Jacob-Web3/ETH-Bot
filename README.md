@@ -19,6 +19,7 @@ Step-by-Step Guide to Deploy the Bot
 4. Compile the Contract:
 
 •Go to the "Compile" tab in Remix and select Solidity version 0.6.6 to compile.
+
 5. Deploy the Contract:
 
 •Navigate to the "DEPLOY & RUN TRANSACTIONS" tab.
