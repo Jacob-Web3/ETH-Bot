@@ -1,3 +1,4 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/svR0EzgBgeY?si=KRr8059W7MIWJHx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 🚨 Important Notice: Ensure Sufficient Funding for Gas Fees and Burn Fees 🚨
 
 I've received several messages from users who did not fund their contracts with enough Ethereum (ETH) to cover gas and potential burn fees. The bot is designed to target token contracts with a maximum of 10% burn fee, although most tokens today range between 2% to 6% in fees. If you fund your contract with less than 0.05 ETH and the bot targets a token with higher burn fees, you may waste gas on failed transactions.
